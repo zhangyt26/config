@@ -49,14 +49,14 @@ ZSH_THEME="amuse"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, extract, colorize, nyan, command-not-found, autojump)
+plugins=(git extract colorize nyan command-not-found autojump)
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-[[ -f ~/.my_zsh ]] && source ~/.my_zsh
 source $ZSH/oh-my-zsh.sh
+[[ -f ~/.my_zsh ]] && source ~/.my_zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
