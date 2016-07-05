@@ -48,3 +48,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 set tabstop=4 shiftwidth=4 expandtab
+set backspace=2
