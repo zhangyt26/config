@@ -54,8 +54,6 @@ plugins=(git extract colorize nyan command-not-found autojump)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.my_zsh ]] && source ~/.my_zsh
 
