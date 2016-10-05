@@ -18,3 +18,10 @@ Except for some standard stuff, here is some personal customization:
 
 ## hammerspoon
 A lot of great things. Just read the script and try some.
+
+## inspirations
+[ztomer hammerspoon](https://github.com/ztomer/.hammerspoon)
+
+[BrianGilbert hammerspoon](https://github.com/BrianGilbert/.hammerspoon)
+
+[wadey iterm](https://github.com/wadey/dotfiles/blob/master/zsh/iterm2.zsh)
