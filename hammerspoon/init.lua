@@ -1,4 +1,5 @@
 require "pomodoor"
+require "windowedge"
 
 -- init grid
 hs.grid.MARGINX 	= 0
@@ -14,7 +15,8 @@ local mash_shift = {"ctrl", "alt", "shift"}
 --------------------------------------------------------------------------------
 appCuts = {
   i = 'iterm',
-  c = 'Google chrome'
+  c = 'Google chrome',
+  s = 'Spotify'
 }
 
 -- Launch applications
@@ -50,8 +52,12 @@ hs.hotkey.bind(mash, 'RIGHT', hs.grid.resizeWindowWider)
 hs.hotkey.bind(mash, '.', hs.hints.windowHints)
 
 -- pomodoro key binding
-hs.hotkey.bind(mash, '9', function() pom_enable() end)
-hs.hotkey.bind(mash, '0', function() pom_disable() end)
+hs.hotkey.bind(mash, '-', function() pom_enable() end)
+hs.hotkey.bind(mash, '=', function() pom_disable() end)
+
+-- windowedge key binding
+hs.hotkey.bind(mash, "L", function() movewin("left") end)
+hs.hotkey.bind(mash, "R", function() movewin("right") end)
 
 -- Monitor and reload config when required
 function reload_config(files)
