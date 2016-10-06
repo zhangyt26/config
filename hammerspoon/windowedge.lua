@@ -25,12 +25,15 @@ function movewin(direction)
     -- add a watcher so we can clean the origWindowPos if window is closed
     local watcher = win:newWatcher(cleanupWindowPos, id)
     watcher:start({hs.uielement.watcher.elementDestroyed})
-    f.y = 0
-    f.h = res.h
-    f.w = res.w / 2
+    -- f.y = 0
+    -- f.h = res.h
+    -- f.w = res.w / 2
+    -- if direction == "left" then f.x = 0 end
+    -- if direction == "right" then f.x = res.w - f.w end
+    if direction == "left" then f.x = (res.w - (res.w * 2)) + 10 end
+    if direction == "right" then f.x = (res.w + res.w) - 10 end
+    if direction == "down" then f.y = (res.h + res.h) - 10 end
 
-    if direction == "left" then f.x = 0 end
-    if direction == "right" then f.x = res.w - f.w end
     win:setFrame(f)
   else
     -- restore the window if there is a value for origWindowPos
