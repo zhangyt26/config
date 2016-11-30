@@ -52,7 +52,7 @@ ZSH_THEME="junkfood"
 plugins=(git extract colorize nyan command-not-found autojump)
 
 # User configuration
-
+function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.my_zsh ]] && source ~/.my_zsh
