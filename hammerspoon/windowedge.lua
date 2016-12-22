@@ -32,7 +32,7 @@ function movewin(direction)
       f.y = res.y
     end
     if direction == "right" then
-      f.x = res.w - f.w
+      f.x = res.x + f.w
       f.y = res.y
     end
     -- if direction == "left" then f.x = (res.w - (res.w * 2)) + 10 end
