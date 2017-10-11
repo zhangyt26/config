@@ -26,6 +26,9 @@ for key, app in pairs(appCuts) do
   hs.hotkey.bind(mash_app, key, function () hs.application.launchOrFocus(app) end)
 end
 
+-- toggle clipboard
+hs.hotkey.bind(mash, '/', spoon.ClipShow.toggleShow)
+
 -- maximize window
 hs.hotkey.bind(mash, 'M', hs.grid.maximizeWindow)
 
