@@ -53,6 +53,7 @@ plugins=(git extract colorize nyan command-not-found autojump)
 
 # User configuration
 function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
+alias android_screenshot='adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screen.png'
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.my_zsh ]] && source ~/.my_zsh
