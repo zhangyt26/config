@@ -1,5 +1,7 @@
-require "pomodoor"
 require "windowedge"
+
+hs.loadSpoon('ClipShow')
+hs.loadSpoon('ModalMgr')
 
 -- init grid
 hs.grid.MARGINX 	= 0
@@ -24,12 +26,7 @@ for key, app in pairs(appCuts) do
   hs.hotkey.bind(mash_app, key, function () hs.application.launchOrFocus(app) end)
 end
 
--- change focus
-hs.hotkey.bind(mash_shift, 'H', function() hs.window.focusedWindow():focusWindowWest() end)
-hs.hotkey.bind(mash_shift, 'L', function() hs.window.focusedWindow():focusWindowEast() end)
-hs.hotkey.bind(mash_shift, 'K', function() hs.window.focusedWindow():focusWindowNorth() end)
-hs.hotkey.bind(mash_shift, 'J', function() hs.window.focusedWindow():focusWindowSouth() end)
-
+-- maximize window
 hs.hotkey.bind(mash, 'M', hs.grid.maximizeWindow)
 
 -- multi monitor
@@ -49,11 +46,10 @@ hs.hotkey.bind(mash, 'DOWN', hs.grid.resizeWindowTaller)
 hs.hotkey.bind(mash, 'RIGHT', hs.grid.resizeWindowWider)
 
 -- Window Hints
-hs.hotkey.bind(mash, '.', hs.hints.windowHints)
-
--- pomodoro key binding
-hs.hotkey.bind(mash, '-', function() pom_enable() end)
-hs.hotkey.bind(mash, '=', function() pom_disable() end)
+function hintSelected(window)
+  window.focus()
+end
+hs.hotkey.bind(mash, '.', function() hs.hints.windowHints(nil, hintSelected) end)
 
 -- windowedge key binding
 hs.hotkey.bind(mash, "L", function() movewin("left") end)
