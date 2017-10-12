@@ -4,12 +4,6 @@ hs.loadSpoon('ModalMgr')
 hs.loadSpoon('HCalendar')
 hs.loadSpoon('TextClipboardHistory')
 
--- init grid
-hs.grid.MARGINX 	= 0
-hs.grid.MARGINY 	= 0
-hs.grid.GRIDWIDTH 	= 16
-hs.grid.GRIDHEIGHT 	= 16
-
 -- hotkey mash
 local mash       = {"ctrl", "alt"}
 local mash_app 	 = {"cmd", "alt", "ctrl"}
